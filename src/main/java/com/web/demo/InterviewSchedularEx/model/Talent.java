@@ -2,7 +2,6 @@ package com.web.demo.InterviewSchedularEx.model;
 
 import java.time.LocalDate;
 
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,8 +24,10 @@ public class Talent {
 	private Long id;
 	private String name;
 	private String requriment;
-	private LocalDate sartDate;
+    private LocalDate sartDate;
 	private LocalDate endDate;
-	private LocalDate jobLocation;
+	private String jobLocation;
+	
+	
 
 }

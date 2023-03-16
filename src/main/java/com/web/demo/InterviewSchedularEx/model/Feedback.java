@@ -1,4 +1,4 @@
-package com.web.demo.InterviewSchedularEx.model;
+	package com.web.demo.InterviewSchedularEx.model;
 
 import javax.persistence.Entity;
 
@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "feedback")
+@Table(name = "feedback")			
 public class Feedback {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

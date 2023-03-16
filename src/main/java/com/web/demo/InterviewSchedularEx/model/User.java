@@ -30,7 +30,7 @@ public class User {
 	private String address;
 	@Column
 	private String mobile;
-	@Column(name = "emailId", unique = true, nullable = false)
+	@Column(name = "emailId")
 	private String emailId;
 	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	@Column
