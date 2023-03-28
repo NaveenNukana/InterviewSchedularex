@@ -1,4 +1,4 @@
-package com.web.demo.InterviewSchedularEx.dto;
+ package com.web.demo.InterviewSchedularEx.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

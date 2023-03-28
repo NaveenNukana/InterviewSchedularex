@@ -33,34 +33,29 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserDto getUser(long id) {
 		Optional<User> optionalUser = userRepository.findById(id);
-		User user = optionalUser.orElseThrow(() -> new ResourceNotFoundException("Resource not found ", HttpStatus.NOT_FOUND));
+		User user = optionalUser
+				.orElseThrow(() -> new ResourceNotFoundException("Resource not found ", HttpStatus.NOT_FOUND));
 		UserDto userDto = userMapper.toUserDto(user);
 		return userDto;
 	}
 
 	@Override
-	public List<UserDto> getusers() {
+	public List<User> getusers() {
 		List<User> user = userRepository.findAll();
-		
-//		List<UserDto> userDto=userMapper.toUserDto(user);
-		
-		return  null;
-	}
-	@Override
-	public User findUserByEmailId(String emailId) {
-		User user= userRepository.findUserByEmailId(emailId);
-//		UserDto userDto=userMapper.toUserDto(user);		
+
 		return user;
 	}
-	 public User deleteEmployeeById(long id) {
-		 userRepository.deleteById(id);
-		return null;
-	   }
 
-//	@Override
-//	public List<UserDto> getusers() {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
+	@Override
+	public User findUserByEmailId(String emailId) {
+		User user = userRepository.findUserByEmailId(emailId);
+
+		return user;
+	}
+
+	public User deleteEmployeeById(long id) {
+		userRepository.deleteById(id);
+		return null;
+	}
 
 }

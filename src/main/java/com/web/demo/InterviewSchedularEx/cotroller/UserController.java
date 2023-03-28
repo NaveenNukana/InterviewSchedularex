@@ -38,24 +38,26 @@ public class UserController {
 		UserDto userDto = userService.getUser(id);
 		return new ResponseEntity<>(userDto, HttpStatus.CREATED);
 	}
+
 	@GetMapping("/{emailId}")
 	public HttpEntity<User> findUserByEmailId(@PathVariable String emailId) {
-		User user= userService.findUserByEmailId(emailId);
-//		UserDto userDto=userMapper.toUserDto(user);		
+		User user = userService.findUserByEmailId(emailId);
+
 		return new ResponseEntity<>(user, HttpStatus.CREATED);
 
-}
-	@GetMapping("users")
-	public HttpEntity<ResponseDto> findAll(){
-//	List<User> users=userService.findAll(); 
-		List<UserDto> users = userService.getusers();
-//		List<UserDto> userDto=userMapper.toUserDto(user);
-		return  new ResponseEntity<>(ResponseUtil.getSuccessResponse(users),HttpStatus.OK);
 	}
+
+	@GetMapping("users")
+	public HttpEntity<ResponseDto> findAll() {
+
+		List<User> users = userService.getusers();
+		return new ResponseEntity<>(ResponseUtil.getSuccessResponse(users), HttpStatus.CREATED);
+	}
+
 	@DeleteMapping("{id}")
-	public ResponseEntity<User>  deleteEmployee(@PathVariable("id") long id) {
-		User user=userService.deleteEmployeeById(id);
-		return new ResponseEntity<>(user,HttpStatus.NOT_FOUND) ; 
-				}
+	public ResponseEntity<User> deleteEmployee(@PathVariable("id") long id) {
+		User user = userService.deleteEmployeeById(id);
+		return new ResponseEntity<>(user, HttpStatus.NOT_FOUND);
+	}
 
 }

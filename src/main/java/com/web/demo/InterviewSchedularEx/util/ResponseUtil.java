@@ -22,14 +22,14 @@ public class ResponseUtil {
 		response.setStatusCode(ApiStatus.failure.getvalue());
 		return response;
 	}
-	public static ResponseDto getResponse(String message, String status,Collection data) {
+	public static ResponseDto getResponse(String message,String status,Collection data) {
 		ResponseDto response = new ResponseDto();
 		response.setMessage(message);
 		response.setStatusCode(status);
 		response.setData(data);
 		return response;		
 	}
-	public static ResponseDto getResponse(String message, String status,Object data) {
+	public static ResponseDto getResponse(String message,String status,Object data) {
 		ResponseDto response = new ResponseDto();
 		response.setMessage(message);
 		response.setStatusCode(status);

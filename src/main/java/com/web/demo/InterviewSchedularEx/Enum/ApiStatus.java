@@ -1,5 +1,8 @@
 package com.web.demo.InterviewSchedularEx.Enum;
 
+
+
+
 public enum ApiStatus {
 	SUCCCESS,
 	failure,
@@ -7,7 +10,7 @@ public enum ApiStatus {
 
 	public String getvalue() {
 		// TODO Auto-generated method stub
-		return null;
+		return toString();
 	}
 	
 

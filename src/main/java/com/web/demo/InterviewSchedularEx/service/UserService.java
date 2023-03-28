@@ -13,7 +13,7 @@ public interface UserService {
 
 	User findUserByEmailId(String  emailId);
 
-	List<UserDto> getusers();
+	List<User> getusers( );
 	User deleteEmployeeById(long id);
 
 }

@@ -59,7 +59,7 @@ public class InterviewMapper {
 		}
 		return interviews
 				.stream()
-				.map(interview -> toInterviewDto(interview))
+				.map(interview -> toInterviewDto(interview))  
 				.collect(Collectors.toList());
 	}
 }

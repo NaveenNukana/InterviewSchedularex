@@ -30,7 +30,7 @@ public class CandidateController {
 	@GetMapping("/{emailId}")
 	public HttpEntity<Candidate> findCandidateByEmailId(@PathVariable String emailId) {
 		Candidate candidate= candidateService.findCandidateByEmail(emailId);
-//		UserDto userDto=userMapper.toUserDto(user);		
+		
 		return new ResponseEntity<>(candidate, HttpStatus.CREATED);
 
 }
